@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Offline multisig python by coinkite</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Offline multisig python</h1>
+        <p>Sign bitcoin multisig transactions (P2SH spends) from your Coinkite shared accounts, using this simple python program</p>
+
+        <p class="view"><a href="https://github.com/coinkite/offline-multisig-python">View the Project on GitHub <small>coinkite/offline-multisig-python</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/coinkite/offline-multisig-python/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/coinkite/offline-multisig-python/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/coinkite/offline-multisig-python">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="offline-signing-tool-python-version" class="anchor" href="#offline-signing-tool-python-version" aria-hidden="true"><span class="octicon octicon-link"></span></a>Offline Signing Tool (python version)</h1>
+
+<p>This simple tool can be used to sign a proposed multisig transaction
+(P2SH spend). You must already posess the associated extended public key
+(BIP32 wallet). The details of the transaction to be signed can
+either be fetched from Coinkite (based on a very long URL, provided
+with <code>--url</code> argument) or in a file, as download from the site.</p>
+
+<p>The signed output (which is a small JSON file) can be uploaded
+manually, but this program will by default upload the file to
+Coinkite.  If this new signature is the final one required, the
+transaction is sent immediately.</p>
+
+<p><a href="https://coinkite.com/faq/multisig">Learn more about Coinkite's Multisig (Shared) accounts</a>
+and visit the <a href="https://coinkite.com/">Coinkite Main Site</a> to open your
+account today!</p>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<p><img src="https://raw.githubusercontent.com/coinkite/offline-multisig-python/master/example-form.png" alt="form screenshot" title="Example from Coinkite.com"></p>
+
+<p>Save the file you get from pressing beside the <strong>Green</strong> arrow, and 
+provide that as the <code>--proposal</code> argument. If you need to manually upload,
+use the file saved with <code>--output</code> at the <strong>Blue</strong> arrow.</p>
+
+<p>You must always provide a base58 encoded <code>xprv</code> key
+using the <code>--key</code> argument.</p>
+
+<pre><code>Usage: olsign.py [OPTIONS]
+
+Options:
+  -i, --proposal FILENAME  JSON file downloaded from CK already
+  -u, --url URL            https://coinkite.com/co-
+                           sign/json/&lt;req&gt;:&lt;cos&gt;:&lt;pin_check&gt;
+  --html / --no-html       Show details of proposed transaction?
+  -k, --key FILENAME       Extended private key (base58)  [required]
+  --upload / --no-upload   Auto upload signed results file to CK?
+  -o, --output FILENAME    Write signed response to this file
+  --help                   Show this message and exit.
+</code></pre>
+
+<h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>See also the version numbers in the <code>requirements.txt</code> file, which should
+be ready to use with <code>pip install -r requirements.txt</code>.</p>
+
+<p><strong>Important:</strong> We require message signing features which have not yet been
+accepted upstream into <code>pycoin</code> so please use
+<a href="https://github.com/peter-conalgo/pycoin/tree/msg_signing_2">this fork of pycoin</a>
+for now:</p>
+
+<pre><code>git://github.com/peter-conalgo/pycoin.git@msg_signing_2#egg=pycoin
+</code></pre>
+
+<h2>
+<a id="more-about-coinkite" class="anchor" href="#more-about-coinkite" aria-hidden="true"><span class="octicon octicon-link"></span></a>More about Coinkite</h2>
+
+<p><em>Join The Most Powerful Bitcoin Platform</em></p>
+
+<p>Coinkite is the leading <a href="/faq/features">bitcoin wallet</a> with <a href="/faq/multisig">multi-signature</a>, <a href="/faq/security">bank-grade security</a>, <a href="/faq/developers">developer's API</a> and <a href="/privacy">hardcore privacy</a>.</p>
+
+<p><a href="https://coinkite.com/">Get Your Account Today!</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/coinkite">coinkite</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-40834364-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
