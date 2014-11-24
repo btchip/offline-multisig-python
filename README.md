@@ -1,7 +1,7 @@
 # Offline Signing Tool (python version)
 
 This simple tool can be used to sign a proposed multisig transaction
-(P2SH spend). You must already posess the associated extended public key
+(P2SH spend). You must already possess the associated extended public key
 (BIP32 wallet). The details of the transaction to be signed can
 either be fetched from Coinkite (based on a very long URL, provided
 with `--url` argument) or in a file, as download from the site.
@@ -10,6 +10,9 @@ The signed output (which is a small JSON file) can be uploaded
 manually, but this program will by default upload the file to
 Coinkite.  If this new signature is the final one required, the
 transaction is sent immediately.
+
+This code is functionally equivalent to the standard Javascript
+offline-signing code we provide at: <https://coinkite.com/offline/>
 
 [Learn more about Coinkite's Multisig (Shared) accounts](https://coinkite.com/faq/multisig)
 and visit the [Coinkite Main Site](https://coinkite.com/) to open your
@@ -31,8 +34,7 @@ Usage: olsign.py [OPTIONS]
 
 Options:
   -i, --proposal FILENAME  JSON file downloaded from CK already
-  -u, --url URL            https://coinkite.com/co-
-                           sign/json/<req>:<cos>:<pin_check>
+  -u, --url URL            https://coinkite.com/co-sign/json/<req>:<cos>:<pin_check>
   --html / --no-html       Show details of proposed transaction?
   -k, --key FILENAME       Extended private key (base58)  [required]
   --upload / --no-upload   Auto upload signed results file to CK?
