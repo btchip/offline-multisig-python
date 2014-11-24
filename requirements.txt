@@ -1,0 +1,9 @@
+simplejson>=3.2.0
+click>=3.3
+
+requests>=2.3.0
+pytest>=2.5.2
+
+# Need some new code in pycoin, not yet part of master... Hopefully will be in 0.53
+#pycoin>=0.53
+-e git://github.com/peter-conalgo/pycoin.git@msg_signing_2#egg=pycoin
