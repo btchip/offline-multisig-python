@@ -48,8 +48,8 @@ See also the version numbers in the `requirements.txt` file, which should
 be ready to use with `pip install -r requirements.txt`.
 
 **Important:** We require message signing features which have not yet been
-accepted upstream into `pycoin` so please use
-[this fork of pycoin](https://github.com/peter-conalgo/pycoin/tree/msg_signing_2)
+accepted upstream into [pycoin from Richard Kiss](https://github.com/richardkiss/pycoin)
+so please use [this fork of pycoin](https://github.com/peter-conalgo/pycoin/tree/msg_signing_2)
 for now:
 
     git://github.com/peter-conalgo/pycoin.git@msg_signing_2#egg=pycoin
