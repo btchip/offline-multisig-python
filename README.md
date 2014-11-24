@@ -57,9 +57,10 @@ for now:
 
 ## More about Coinkite
 
-Coinkite is the world's easiest and most powerful web wallet for
-safely holding all your cryptocurrencies, including Bitcoin and Litecoin.
+_Join The Most Powerful Bitcoin Platform_
 
-[Learn more about all we offer](https://coinkite.com/)
+Coinkite is the leading [bitcoin wallet](/faq/features) with [multi-signature](/faq/multisig), [bank-grade security](/faq/security), [developer's API](/faq/developers) and [hardcore privacy](/privacy).
+
+[Get Your Account Today!](https://coinkite.com/)
 
 
